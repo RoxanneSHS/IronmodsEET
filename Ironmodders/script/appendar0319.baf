@@ -1,0 +1,7 @@
+IF
+Global("SUCarelessBook","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("SUCarelessBook","GLOBAL",1)
+ActionOverride("Shelf5",CreateItem("sufebook",0,0,0)) 
+END

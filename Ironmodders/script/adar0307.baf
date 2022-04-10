@@ -1,0 +1,46 @@
+IF
+ G("J#spawndoo",0)
+THEN
+ RESPONSE #100
+  CreateCreature("J#im8grd",[1580.2510],4)
+  SG("J#spawndoo",1)
+END
+
+IF
+ G("J#im8booterrack",1)
+THEN
+ RESPONSE #100
+  SG("J#im8booterrack",2)
+  Deactivate("arnman07")
+  Deactivate("booter")
+  CreateCreature("J#im8boo",[2236.2384],2)
+  CreateCreature("J#im8tor",[2136.2423],6)
+END
+
+IF
+ G("J#im8guardcorpse",1)
+THEN
+ RESPONSE #100
+  SG("J#im8guardcorpse",2)
+  CreateCreature("deadb01",[993.2112],8)
+END
+
+IF
+G("J#im8booterrack",3)
+THEN
+ RESPONSE #100
+SG("J#im8booterrack",4)
+SetGlobalTimer("J#Restore","ar0307",ONE_DAY)
+END
+
+IF
+G("J#im8booterrack",4)
+GlobalTimerExpired("J#Restore","ar0307")
+THEN
+RESPONSE #100
+  SG("J#im8booterrack",5)
+  Activate("booter")
+  Deactivate("J#im8boo")
+  Deactivate("J#im8tor")
+  Activate("arnman07")
+END

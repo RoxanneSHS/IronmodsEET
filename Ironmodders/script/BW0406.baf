@@ -1,0 +1,9 @@
+IF
+Global("BW11WWII","GLOBAL",2)
+Global("BW11HelpGlobal","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("BW11HelpGlobal","GLOBAL",1)
+CreateCreature("BW11CRE3",[1484.1804],13)
+Continue()
+END

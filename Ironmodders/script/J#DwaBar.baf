@@ -1,0 +1,6 @@
+IF
+	Global("J#AleAmbush","GLOBAL",3)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet([ANYONE])
+END

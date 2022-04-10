@@ -1,0 +1,10 @@
+IF
+Global("DidOnce","LOCALS",0)
+Range([PC],12)
+THEN
+RESPONSE #100
+SetGlobal("DidOnce","LOCALS",1)
+StartDialogueNoSet(Player1)
+END
+
+

@@ -1,0 +1,7 @@
+IF
+Global("AKMend","GLOBAL",2)
+THEN RESPONSE #100
+ClearAllActions()
+StartCutSceneMode()
+StartCutScene("AKMcut2")
+END

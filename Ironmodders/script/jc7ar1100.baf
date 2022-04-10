@@ -1,0 +1,8 @@
+IF
+Global("FionaInvis","AR1100",0)
+THEN
+RESPONSE #100
+SetGlobal("FionaInvis","AR1100",1)
+CreateCreature("pginvis",[2418.1676],0)
+END
+

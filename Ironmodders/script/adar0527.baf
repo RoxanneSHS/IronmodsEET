@@ -1,0 +1,9 @@
+IF
+ G("J#im8guardchat",5)
+THEN
+ RESPONSE #100
+  SG("J#im8guardchat",6)
+  CreateCreature("J#im8thg",[307.335],0)
+  CreateCreature("J#im8thg",[496.211],12)
+  CreateCreature("J#im8thg",[450.310],14)
+END

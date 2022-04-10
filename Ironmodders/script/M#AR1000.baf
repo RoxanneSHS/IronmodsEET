@@ -1,0 +1,8 @@
+IF
+Global("M#QuestExists","AR1000",0)
+THEN
+RESPONSE #100
+SetGlobal("M#QuestExists","AR1000",1)
+CreateCreature("Questor",[2630.1203],3)
+Continue()
+END

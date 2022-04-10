@@ -1,0 +1,8 @@
+IF
+See([PC])
+See("Haer'Dalis")
+Global("E#HaeGroupies","GLOBAL",0)
+THEN
+RESPONSE #100
+Dialogue (Nearest([PC]))
+END

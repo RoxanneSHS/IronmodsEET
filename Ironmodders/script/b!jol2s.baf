@@ -1,0 +1,7 @@
+IF
+  Global("B!IMJolunExists","GLOBAL",1)
+THEN
+  RESPONSE #100
+    MoveBetweenAreas("AR0709",[382.636],2)
+    SetGlobal("B!IMJolunExists","GLOBAL",2)
+END

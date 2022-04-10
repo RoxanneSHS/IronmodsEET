@@ -1,0 +1,11 @@
+IF
+	See(Player1)
+	CombatCounter(0)
+	G("CliffNotTalked",0)
+THEN
+	RESPONSE #100
+	SG("CliffNotTalked",1)
+	CreateVisualEffectObject("SPLIGHTB",Myself)
+	Dialog(Player1)
+END
+

@@ -1,0 +1,9 @@
+IF
+Range([PC],12)
+Global("SUMISTExist", "AR5006", 0)
+THEN
+RESPONSE #100
+SetGlobal("SUMISTExist", "AR5006", 1)
+CreateCreatureDoor("SUMIST",[235.690],9)
+END
+

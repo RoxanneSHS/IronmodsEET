@@ -1,0 +1,8 @@
+IF
+Global("BW11SetTheNPCUP0709","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("BW11SetTheNPCUP0709","GLOBAL",1)
+CreateCreature("BW11CRE1",[882.529],3)
+Continue()
+END

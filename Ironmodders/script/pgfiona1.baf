@@ -1,0 +1,14 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneID("PGFiona")
+MoveViewObject("PGFiona",INSTANT)
+Wait(1)
+CreateCreatureDoor("pgcambi",[2463.1808],8)
+Wait(6)
+ActionOverride("pgcambi",FaceObject("pgfiona"))
+Wait(1)
+ActionOverride("pgcambi",StartDialogueNoSet("pgfiona"))
+EndCutSceneMode()
+END

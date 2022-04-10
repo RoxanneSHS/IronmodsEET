@@ -1,0 +1,24 @@
+IF
+     True()
+THEN
+     RESPONSE #100
+           CutSceneId(Player1)
+           Wait(2)
+           ActionOverride("SC#I5M",ForceSpell("SC#I5Gor",FLASHY_DEATH_1))
+           Wait(5)
+           ActionOverride("SC#I5M",ForceSpell("SC#I5Sar",FLASHY_DEATH_2))
+           Wait(5)
+           ActionOverride("SC#I5M",ForceSpell("SC#I5Elm",FLASHY_DEATH_3))
+           Wait(5)
+           ActionOverride("SC#I5M",ForceSpell("SC#I5Jon",FLASHY_DEATH_1))
+           Wait(5)
+           ActionOverride("SC#I5M",ForceSpell("SC#I5Dri",FLASHY_DEATH_2))
+           Wait(5)
+           DisplayStringHead("SC#I5M",@53)
+           Wait(5)
+           ActionOverride("SC#I5M",ForceSpell("SC#I5Imm",FLASHY_DEATH_3))
+           Wait(5)
+           DisplayStringHead("SC#I5M",@54)
+           Wait(5)
+           ActionOverride("SC#I5M",StartDialogueNoSet(Player1))
+END

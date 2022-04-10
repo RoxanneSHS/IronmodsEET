@@ -1,0 +1,14 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId("SUKiss1")
+MoveToObject([PC])
+Wait(1)
+PlaySound("SUKissK")
+Wait(1)
+ReallyForceSpellRES("sukiss1","SUKiss1")
+ActionOverride("SUKISS1",Polymorph(SKELETON))
+EndCutSceneMode()
+ActionOverride("SUKiss1",StartDialogueNoSet([PC])
+END 

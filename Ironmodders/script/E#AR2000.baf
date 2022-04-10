@@ -1,0 +1,26 @@
+IF
+Dead("cefald01")
+Global("E#FMobExists","ar2000",0)
+THEN
+RESPONSE #100
+SetGlobal("E#FMobExists","AR2000",1)
+CreateCreature("E#FMob1",[2074.2463],7)
+CreateCreature("E#MMob1",[2000.2570],7)
+CreateCreature("E#FMob2",[1982.2600],7)
+CreateCreature("E#MMob2",[2085.2315],7)
+CreateCreature("E#MMob3",[2132.2520],7)
+CreateCreature("E#MMob4",[2092.2371],7)
+CreateCreature("E#FMob4",[2166.2406],7)
+END
+
+IF
+Dead("cefald01")
+Global("E#KernExists","ar2000",0)
+THEN
+RESPONSE #100
+SetGlobal("E#KernExists","AR2000",1)
+CreateCreature("E#Kern",[2032.2352],7)
+CreateCreature("E#Rhys",[1981.2257],0)
+END
+
+

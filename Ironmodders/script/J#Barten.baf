@@ -1,0 +1,7 @@
+IF
+	Global("J#AleAmbush","GLOBAL",2)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		Enemy()
+END

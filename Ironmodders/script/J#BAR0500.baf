@@ -1,0 +1,9 @@
+IF
+GlobalGT("OHN_NEERA_RENC","GLOBAL",2)
+Global("J#Dwarfbar","AR0500",0)
+THEN
+RESPONSE #100
+CreateCreature("J#DwaBar",[3815.100],13)
+SetGlobal("J#Dwarfbar","AR0500",1)
+Continue()
+END

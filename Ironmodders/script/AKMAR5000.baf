@@ -1,0 +1,8 @@
+IF
+Global("AKMmonaExists","AR5000",0)
+THEN
+RESPONSE #100
+SetGlobal("AKMmonaExists","AR5000",1)
+CreateCreature("AKMmona",[337.930],3)
+Continue()
+END

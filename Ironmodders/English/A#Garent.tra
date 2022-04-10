@@ -1,0 +1,80 @@
+@100 = ~Sorry to disturb... My name is Ropar. Can I distract you for a minute? I want to ask you something.~
+@101 = ~We're in a hurry, so speak quickly.~
+@102 = ~I'm already sick of the beggars who constantly want something from me! Get out of sight!~
+@103 = ~Of course, what do you need?~
+@104 = ~Maybe later, I have absolutely no time to spare right now.~
+@105 = ~I welcome you again. Do you have time to listen to my proposal now?~
+@106 = ~Ah, it's you again? I remember about you, you need to wait a little longer.~
+@107 = ~Certainly. What do you want?~
+@108 = ~I'm afraid I still don't have time. Maybe some other day.~
+@109 = ~You come back with nothing... You have not found him? I'm waiting for years already!~
+@1010 = ~We haven't looked for him yet, but we will soon. See you.~
+@1011 = ~Don't worry, Ropar, we can handle it. We'll deliver him to you as soon as we find it.~
+@1012 = ~We searched everything inside and out - no traces anywhere, Ropar. I'm afraid you have incorrect information. There is nothing more we can do.~
+@1013 = ~We found him, and this lout committed suicide, afraid to face the law. A coward!~
+@1014 = ~We managed to track him down, but when we heard his side of the story, we let him go.~
+@1015 = ~Garent was a Shadow Druid. They kidnapped children and sacrificed them in the hope of increasing their crops. But the crops died year after year, and then he realized that this path was fundamentally wrong. He realized his mistakes and lived as a hermit, helped nature and everyone whom fate brought to him. He was old and chose to die by his own hand just to avoid prison when we confronted him.~
+@1016 = ~What? Are you sure? Well, thank you for your help. Here is your gold, as agreed... I will continue my search. Farewell.~
+@1017 = ~What? But...what did he say to you? Why?!?~
+@1018 = ~He was a Shadow Druid. They kidnapped children and sacrificed them in the hope of increasing their crops. But the crops died year after year, and then he realized that this path was fundamentally wrong. He realized his mistakes and now lives as a hermit, and helps nature and everyone whom fate brings to him. He bitterly repents, and no court can punish him even more.~
+@1019 = ~You'd better go and ask him about it yourself, only then you may understand. He is not afraid of punishment. But you'd better hurry before he is gone.~
+@1020 = ~He was a kidnapper and a murderer! You will not receive any reward! I'll track him down and punish him myself!~
+@1021 = ~If his words were so important, then you should have brought him here so that he could repeat them in my presence! Ah! .. I won’t pay you anything, I’ll go looking for him myself!~
+@1022 = ~I see... At least I have my revenge. I thank you and I hope now I can find peace. I'm leaving, it looks like a thunderstorm is approaching... Goodbye.~
+@1023 = ~If he paid the full price for his mistakes, then maybe it was for the best. I thank you and I hope now I can find peace. I'm leaving, it looks like a thunderstorm is approaching... Goodbye.~
+@1024 = ~Time is patient, I'll wait for your return.~
+@1025 = ~I once lived north of here, in Baldur's Gate. I was young and I had a little brother, Marchi. He... he was just an angel become flesh. But one day our little angel was kidnapped.~
+@1026 = ~Marchi was abducted at night, and the Flaming Fist who were on the case could only find a small piece of yellow cloth. They never found the kidnappers.~
+@1027 = ~Terrible story. What happened next?~
+@1028 = ~I don't like this whole story. Goodbye.~
+@1029 = ~Several more children went missing the following year. And a year later, it all happened again. I grew older and over the years I've been able to trace the kidnappers to Cloakwood. The children were led away by an elderly man in a heavy yellow robe.~
+@1030 = ~I told the Flaming Fist everything, but again they could not do anything. Then, I decided to dedicate my whole life to hunting down this scoundrel, and so I found him.~
+@1031 = ~If so, what do you need from us?~
+@1032 = ~But Cloakwood is far to the north. What are you doing here in Beregost?~
+@1033 = ~Now it's clear where this leads to. I don't want to participate in this. Goodbye.~
+@1034 = ~I want you to capture this bastard and bring him to me, and I will hand him over to justice! Myself, I am no warrior, and I certainly will not be able to cope with him. I really want this man dead, but everything must be done according to the law.~
+@1035 = ~For the past few months he has been living as a hermit near the Temple of Lathander, to the east. Do you agree to find him and bring him to me?~
+@1036 = ~Such atrocities must not go unpunished. You can rely on me!~
+@1037 = ~To be honest, I don't want to deal with all of this. Goodbye.~
+@1038 = ~If everything is handled according to the law, then you can count on me.~
+@1039 = ~I am here for one simple reason: I have learned that for the past few months this monster in human form has been living as a hermit to the east of here, near the Temple of Lathander. Do you agree to find him and bring him to me? I am not a warrior, and I certainly will not be able to cope with him myself.~
+@1040 = ~I really want this man dead, but everything must be done according to the law. He will accompany me back to Baldur's Gate and stand trial there.~
+@1041 = ~This scum must answer for everything. Of course you can count on me!~
+@1042 = ~Thank you. I will pay you 50 gold pieces and pray for your success. Looking forward to your return.~
+@1043 = ~On the trail of a kidnapper
+
+In Beregost we met a man who called himself Ropar. He told us that many years ago his younger brother and several other children were kidnapped and killed. The leader of the kidnappers was a man in a heavy yellow robe who now lives the life of a hermit near the Temple of Lathander. We must deliver him to Ropar to face justice.~
+@1044 = ~Lies to heal
+
+We lied to Ropar about not finding any trace of Garent. It seems to me that Garent realized the gravity of his crimes and, given his age, he will not endure the punishment that is due to him by law. Do I have the right to decide this issue on my own? I don't know... Ropar decided to continue his search.~
+@1045 = ~Return to Ropar
+
+We told Ropar that we let Garent go because the gods punished him much more than human justice could. Ropar didn't pay us anything. Instead, cursing us, he rushed in pursuit of Garent. Perhaps someday he will understand everything ...~
+@1046 = ~Return to Ropar
+
+We told Ropar that we let Garent go and that he should talk to him in person if he wanted to know why. Ropar didn't pay us anything. Instead, cursing us, he rushed in pursuit of Garent. Perhaps someday he will understand everything ...~
+@1047 = ~Easy Money
+
+We informed Ropar that the weakling Garent had committed suicide out of fear of the law. We can say that 50 coins just fell from the sky. I didn't even have to fight anyone!~
+@1048 = ~Garent's death - Ropar's peace?
+
+We told Ropar that Garent paid with his own life for the mistakes he once made. It seems that Ropar understood that Garent sincerely repented his crimes. Perhaps now Ropar can find peace.~
+@1049 = ~On the trail of a kidnapper~
+
+@200 = ~Greetings. I am Garent. Judging by your faces, you are looking for me. How can I help?~
+@201 = ~We are here to hold you accountable for your crimes, kidnapper!~
+@202 = ~A man named Ropar hired us to take you to jail.~
+@203 = ~You're right. You'll have to come with us, old man.~
+@204 = ~What's the matter? I didn't do anything reprehensible. Unless... my past has finally caught up with me.~
+@205 = ~You know very well what you have done, kidnapper!~
+@206 = ~I don't care much for the kids you kidnapped years ago, but there's a handsome reward being offered for your capture, old man.~
+@207 = ~Oh, yes... I'm just an old man now, but once everything was completely different. But before you judge me, let me tell you my story. I'm not trying to evade, I just need to talk to someone.~
+@208 = ~I was a Shadow Druid, we lived near Cloakwood; I had three or four others with me. Our land was barren, so during the harvest, we entered the city, kidnapped and sacrificed babies to attract the favour of our gods.~
+@209 = ~But these sacrifices were in vain. I only realized it years later. The only rain that fell on the ground as a result of our actions was the rain from the tears of the unfortunate parents of children. Our victims could not appeal to the gods, because we acted too secretly.~
+@2010 = ~But I left our circle of druids and tried to start a new life. My new god Eldath does not accept violence in any form. I live alone and help everyone whom fate brings my way. But I... never forget the atrocities I once did. Every time it rains, the water feels salty from my tears and eats away at my flesh.~
+@2011 = ~A very touching story. And yet, you will have to come with us.~
+@2012 = ~You did terrible deeds, but now you bitterly repent your deeds. You're an old man, and there's no point in sending you to prison... or to the gallows.~
+@2013 = ~It's good that you admit your mistakes, but nevertheless, you will have to come with us.~
+@2014 = ~Your story saddened and irritated my heart ... It's not for me to judge you. Go in peace.~
+@2015 = ~Prison is not an appropriate punishment for me. If I have to atone for my guilt, then only with my life. Once I took other people's lives, and now I will give mine. I hope the gods have mercy and forgive me. Tell those who sent you that I am bitterly sorry for what I did.~
+@2016 = ~Thank you for your mercy with an unfortunate old man. I have too little time left to spend my last days in prison. And at large, I will try every day to atone for my crimes. Farewell, and tell those who sent you that I bitterly repent my deeds.~

@@ -1,0 +1,26 @@
+IF
+Global("SUSPYIMExist", "AR5006", 0)
+THEN
+RESPONSE #100
+SetGlobal("SUSPYIMExist", "AR5006", 1)
+CreateCreature("SUSPYIM",[160.680],9)
+END
+
+IF
+Global("SuMistPCPlayedASuckah", "GLOBAL", 1)
+THEN
+RESPONSE #100
+SetGlobal("SuMistPCPlayedASuckah", "GLOBAL", 2)
+PlaySound("EFF_P17")
+ForceSpellRES("SUSUCKAH", Player1)
+ForceSpellRES("SPIN545", Player1)
+ForceSpellRES("SPIN545", Player1)
+END
+
+IF
+Global("SuMistPCPlayedASuckah", "GLOBAL", 2)
+THEN
+RESPONSE #100
+SetGlobal("SuMistPCPlayedASuckah", "GLOBAL", 3)
+ActionOverride("SUSPYIM",DestroySelf())
+END

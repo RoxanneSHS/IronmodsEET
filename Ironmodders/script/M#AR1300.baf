@@ -1,0 +1,22 @@
+IF
+InParty("M#Quest")
+!Exists("M#QuesM")
+!Dead("M#QuesM")
+OR(2)
+Global("QuestMExists","AR1300",0)
+Global("QuestMExists","AR1304",0)
+THEN
+RESPONSE #100
+SetGlobal("QuestMExists","AR1300",1)
+SetGlobal("QuestMExists","AR1304",1)
+CreateCreature("QuestM",[4400.1592],3)
+Continue()
+END
+
+IF
+Dead("M#QuesM")
+InMyArea("M#QuesM")
+THEN
+RESPONSE #100
+ActionOverride("M#QuesM",DestroySelf())
+END

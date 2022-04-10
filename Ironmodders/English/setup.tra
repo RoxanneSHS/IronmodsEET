@@ -1,0 +1,114 @@
+@0 = ~Mia~
+@1 = ~Jolun's Pigment~
+@2 = ~This is the pigment that Jolun required for his 'masterpiece.' It's rather pinkish, but the colour is very intense. What he could do with such a pale pigment will have to remain a mystery.~
+@3 = ~<CHARNAME>'s 'Portrait'~
+@4 = ~This 'masterpiece' that the painter Jolun might not bear much resemblance to you, but it does depict the artist's dubious sense of humour very clearly.~
+@5 = ~Jolun~
+@6 = ~Mind Flayer~
+@7 = ~Help me! Please!~
+@8 = ~Pilgrim Leader~
+@9 = ~Pilgrim~
+@10 = ~Component for EET only~
+@11 = ~Garent~
+@12 = ~Ropar~
+@13   = ~Oh what de hell, one more for ze road, eh?~
+@14    = ~Dahlia~
+@114   = ~Home Zweet Home
+
+I have returned Bizzen to his home after removing two bears that had been terrorising his hive.~
+@115   = ~Find Bizzen's home
+
+I have agreed to take the allegedly deranged and body-possessing bee, Bizzen, and find his hive. Presumably he will move back home once I am in proximity to it. The previous owner of Bizzen, Rizza, has told me that his hive is near where we found her.~
+@16   = ~(Thanks to Bizzen's influence, you have become more resistant to lightning.)~
+@17   = ~(While you are recovering from that unexpected shock, you suddenly feel a vibration spread along the back of your head. You find yourself speaking, although the words are not yours.)~
+@18   = ~Zzo long, friendz!~
+@19   = ~(Bizzen takes a flying leap off your head and crawls into the nest.)~
+
+@21    = ~Bizzen~
+@22    = ~This is Bizzen, a slightly deranged little wingless bee who is simply buzzing with electrical energy.~
+@23    = ~Grizzly bear~
+@24    = ~Rizza~
+@25    = ~Bizzen's hive~
+@26	  = ~Zzorry about that.. I zhocked Rizza alot too... Can't help itz, you! I try to zz keep it under controlz, yah?~
+@27    = ~(Apparently, the little bee has taken a liking to you. Perhaps Bhaalspawn emit an attractive scent.)~
+@28    = ~Bzz! Oopz! Overload!~
+@29    = ~Nicez day, izzit?~
+@30   = ~Zzorry!~
+@31   = ~That izz home! But the bear, they destroy it! Pleaze do zomething!~
+@32   = ~Ohh! Zzhank you! Zo nice of you! It haz been fun, no?~
+@33 = ~Questor~
+@34 = ~Mona~
+@35 = ~Alhandar~
+@36 = ~Armand~
+@37 = ~Stop her!  No!~
+@38 = ~Spectre~
+@39 = ~Prisoner~
+@40 = ~Carrack~
+@41 = ~Lillian~
+@42 = ~Cora~
+@43 = ~Arris~
+@44 = ~Torturer~
+@45 = ~Lady La'Chatterly~
+@46 = ~The Life and Times of Lady La'Chatterly
+
+Those scriveners who have encountered this rare volume are hesitant to speak of its contents, and quick to warn the curious away from investigating the secrets hidden within its covers. This discreet treatment has led to wild rumours surrounding the infamous Lady La'Chatterly that speculate as to the contents of this work, at times branding it frivolous, lascivious, and dangerous. The one consistent opinion of this book remains ominous: Let The Reader Beware.~
+
+@47 = ~Ianthe~
+@48 = ~Jenna~
+@49 = ~Binti~
+@50 = ~This is what must be done!~
+@51 = ~It is done!~
+@52 = ~Ahean~
+@53 = ~Lastly, I might as well do this!~
+@54 = ~THE "FRIENDSHIP" IS OVER!~
+@55 = ~Ghost boy~
+@56 = ~Dwarfbar~
+@57 = ~Hellish Bartender~
+@58 = ~Pirate Bartender~
+@59 = ~The Last Mug of Ale in Amn~
+@60 = ~This is a tall, frosty, foamy mug of ale. If what Dwarfbar said is true, then its value is worth more than all the magical artifacts in Faerun.
+
+As its aroma wafts gently on the breeze and reaches your nose, your mouth begins to water and your eyes become moist with emotion. You wonder what the Last Mug of Ale in Amn would taste like.
+
+Pretty good, is my guess.~
+@61 = ~Kern~
+@62 = ~Rhys~
+
+@99 = ~Fiona's Plea
+
+I have met a strange woman who says her name is Fiona. She says she has been enslaved for bloodsport for countless years by a cruel cambion, and needs me to provide her with sources of power, inspiration, and strength so she can face him and go down in a blaze of glory.~
+@100 = ~Fiona's Plea
+
+With my assistance, the sorceress Fiona has destroyed her tormentor, but the great powers she unleashed upon him killed her in the process. It is an unhappy end to a mysterious tale.~
+@101 = ~Fiona~
+@102= ~That's right, little girl. Fight me! Fight me!~ 
+@103= ~NOOOOOOOOooooooooo!~ 
+
+@133	= ~You must be Aspenth Jackass, right?~
+@134	= ~Yes, I am the contact. That is all you need to know.~
+@135	= ~Do you have the merchandise?~
+@136	= ~Yes, the staff is here. I have tested it myself, to check the quality of the merchandise. It's well worth it's money.~
+@137	= ~I hope so. The fact that we're doing business with you, shouldn't be giving you any bright ideas...~
+@138	= ~No, no, I am completely aware of the dangers I will be facing, in case I do not keep my part of the deal. That was never my intention, so you might as well rest assured.~
+@139 	= ~Excellent. Let me see the merchandise then.~
+@140	= ~Here it is. I can accept no less than 6000 gp for it.~
+@141	= ~Excellent quality merchandise, I have to admit. But 6000 gp is a bit too much, isn't it? Let's say 1000 gp instead.~
+@142	= ~What kind of trick is this? Only 1000 gp? I said, I can accept no less than 6000 gp for it!~
+@143	= ~I can only offer 1000 gp. Remember, this is the Black Market, there are no fixed prices.~
+@144	= ~Perhaps we could sort it out at 3000 gp instead?~
+@145	= ~Perhaps we can work this out a little better, then? Let's say... 1500 gp for you?~
+@146	= ~You're really robbing me right now... Why not 3000 gp?~
+@147	= ~Please understand that we have running costs... Besides, I do not see the reason why we should buy this staff in market prices. After all, you do need us, since you cannot sell it to any legal mart. That being the case, accept 1500 gp or leave.~
+@148	= ~Cruel, but I have no other choice...~
+@149	= ~Very well, just give me the 1500 gp, and get moving.~
+@150	= ~Ah, excellent! The Master will be most pleased.I knew it I could make business with you. Farewell, wizard. And may the next time be more profitable for you.~
+
+@201  = ~Menelaun~
+@202  = ~Master of the Trade~
+@203  = ~Shengerd the Forger~
+@204  = ~H'rothgar Wisewolf~
+@205  = ~Aspenth Jackass~
+@206  = ~Merchant Contract~
+@207  = ~This document ensures safe passage for merchants from different countries coming to Amn. Such documents are issued by the Master of the Trade, who could normally be found in the Council of Six building in Athkatla's Government District. The specific document guarantees safe package to the Sembian Merchant Menelaun. The wizard dropped his license before disappearing.~
+@208  = ~Aspenth's Cloak~
+@209  = ~This cloak belongs to a Black Market Thief named Aspenth Jackass. H'rothgar Wisewolf would be more than happy to see this cloak in your possession, and would certainly reward you, if you showed it to him.~

@@ -1,0 +1,14 @@
+IF
+     True()
+THEN
+     RESPONSE #100
+           CutSceneId(Player1)
+           LeaveAreaLUA("AR0700","",[4774.2539],4)
+           ActionOverride(Player2,LeaveAreaLUA("AR0700","",[4778.2488],4))
+           ActionOverride(Player3,LeaveAreaLUA("AR0700","",[4838.2535],4))
+           ActionOverride(Player4,LeaveAreaLUA("AR0700","",[4839.2488],4))
+           ActionOverride(Player5,LeaveAreaLUA("AR0700","",[4897.2539],4))
+           ActionOverride(Player6,LeaveAreaLUA("AR0700","",[4900.2491],4))
+           Wait(2)
+           EndCutSceneMode()
+END

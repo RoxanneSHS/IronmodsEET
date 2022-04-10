@@ -1,0 +1,7 @@
+IF
+Global("A#IMTutuPlot","GLOBAL",2)
+THEN
+RESPONSE #100
+SetGlobal("A#IMTutuPlot","GLOBAL",3)
+CreateCreature("A#GARENT",[3406.2255],1)
+END

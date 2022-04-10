@@ -1,0 +1,37 @@
+IF
+See([PC])
+NumTimesTalkedTo(0)
+THEN
+RESPONSE #100
+Dialogue(Nearest([PC]))
+END
+
+IF 
+Global("KickedOut","LOCALS",0)
+Global("BeenInPartyFlag","LOCALS",1)
+!InParty(Myself)
+THEN
+RESPONSE #100
+StartDialogue("M#Questo",Player1)
+END
+
+IF
+Global("BeenInPartyFlag","LOCALS",0)
+InParty(Myself)
+THEN
+RESPONSE #100
+SetGlobal("BeenInPartyFlag","LOCALS",1)
+END
+
+IF
+PartyHasItem("Armand")
+InParty(Myself)
+CombatCounter(0)
+!AreaCheck("ar1304")
+!AreaCheck("ar1300")
+THEN
+RESPONSE #100
+TakePartyItem("Armand")
+Wait(2)
+StartDialogue("M#Questo",Player1)
+END

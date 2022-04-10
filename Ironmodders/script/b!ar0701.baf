@@ -1,0 +1,7 @@
+IF
+  Global("B!ThousandWords","GLOBAL",2)
+THEN
+  RESPONSE #100
+    CreateCreature("b!mindfl",[2497.2085],13)
+    SetGlobal("B!ThousandWords","GLOBAL",3)
+END

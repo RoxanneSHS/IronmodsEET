@@ -1,0 +1,682 @@
+BACKUP ~Ironmodders/backup~
+AUTHOR ~diverse, adapted for EE by tipun + Roxanne~
+VERSION ~v1.3~
+
+AUTO_TRA ~Ironmodders/%s~
+
+ALWAYS
+ACTION_IF (GAME_IS ~eet~) BEGIN
+OUTER_SET bg2_chapter = 12
+  END 
+ELSE BEGIN
+    OUTER_SET bg2_chapter = 0
+  END
+OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+OUTER_SET bg2_chapter = bg2_chapter + 1
+OUTER_SPRINT name_source ~bg2_chapter_%i%~
+OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+END
+END
+
+LANGUAGE "English" "english"
+         ~Ironmodders/english/setup.tra~
+LANGUAGE "Russian (by aerie.ru, yota13 & p_zombie)" "russian"
+         ~Ironmodders/russian/setup.tra~
+
+
+BEGIN ~Shadow War by SimDing0~
+
+COMPILE ~Ironmodders/dialogue/d0dialog.d~
+	~Ironmodders/script/d0im10th.baf~
+	~Ironmodders/script/d0im10va.baf~
+
+COPY ~Ironmodders/creature/d0im10va.cre~ ~override~
+     ~Ironmodders/creature/d0im10th.cre~ ~override~
+
+EXTEND_TOP ~ar0800.bcs~ ~Ironmodders/script/d0_area.baf~  EVALUATE_BUFFER
+
+/*___________________________*/
+
+
+BEGIN ~The Oldest Trick in the Book by berelinde~
+
+COPY_EXISTING ~misc8z.itm~ ~override/b!pigmnt.itm~
+  SAY NAME1 @1
+  SAY NAME2 @1
+  SAY DESC @2
+  SAY IDENTIFIED_DESC @2
+
+COPY_EXISTING ~miscao.itm~ ~override/b!portrt.itm~
+  SAY NAME1 @3
+  SAY NAME2 @3
+  SAY DESC @4
+  SAY IDENTIFIED_DESC @4
+
+COPY ~Ironmodders/bmp/b!joluns.bmp~ ~override/bjoluns.bmp~
+COPY_EXISTING ~noble1.cre~ ~override/b!jolun2.cre~
+  SAY NAME1 @5
+  SAY NAME2 @5
+  WRITE_ASCII 0x248 ~b!jol2s~ #8
+  WRITE_ASCII 0x250 ~~ #8
+  WRITE_ASCII 0x2cc ~b!jolun2~ #8
+  WRITE_ASCII 0x34 ~bjoluns~ #8
+  WRITE_ASCII 0x280 ~B!JOLUN2~ #32
+  WRITE_BYTE 0x27b 49
+  WRITE_BYTE 0x2c 25   //metal color    (dark pure gold)
+  WRITE_BYTE 0x2d 44   //minor color    (light purple)
+  WRITE_BYTE 0x2e 58   //major color    (dark blue)
+  WRITE_BYTE 0x2f 12   //skin color     (light carnation pink)
+  WRITE_BYTE 0x30 02   //leather color  (dark bronze)
+  WRITE_BYTE 0x31 115  //armor color    (sun kissed)
+  WRITE_BYTE 0x32 02   //hair color     (dark gold)
+  
+COPY_EXISTING ~mindfl01.cre~ ~override/b!mindfl.cre~
+  SAY NAME1 @6
+  SAY NAME2 @6
+  WRITE_ASCII 0x248 ~b!mindfs~ #8
+  WRITE_ASCII 0x2cc ~b!mindfl~ #8
+  WRITE_ASCII 0x280 ~B!mindfl~ #32
+  WRITE_ASCII 0x270 128
+  ADD_CRE_ITEM ~b!pigmnt~ #0 #0 #0 ~IDENTIFIED~ ~INV1~
+  
+COMPILE ~Ironmodders/dialogue/b!jolun2.d~
+COMPILE ~Ironmodders/dialogue/b!mindfl.d~
+
+EXTEND_TOP ~AR0700.bcs~ ~Ironmodders/script/b!ar0700.baf~
+EXTEND_TOP ~AR0701.bcs~ ~Ironmodders/script/b!ar0701.baf~
+COMPILE ~Ironmodders/script/b!jol2s.baf~
+COMPILE ~Ironmodders/script/b!mindfs.baf~
+
+/*___________________________*/
+
+BEGIN ~Mia's Daughter by Kulyok~
+
+ADD_JOURNAL @1000 @1001 @1002 @1003 USING ~Ironmodders/%LANGUAGE%/o#im10kulyok.tra~
+
+COPY_EXISTING ~cowenf1.cre~ ~override/o#im10w1.cre~
+	WRITE_ASCII 0x248 ~o#im10w1~ #8
+	WRITE_ASCII 0x2cc ~o#im10w1~ #8
+	WRITE_ASCII 0x280 ~o#im10w1~ #32
+
+COPY_EXISTING ~cowenf3.cre~ ~override/o#im10w2.cre~
+	WRITE_ASCII 0x248 ~o#im10w2~ #8
+	WRITE_ASCII 0x2cc ~o#im10w2~ #8
+	WRITE_ASCII 0x280 ~o#im10w2~ #32
+
+COPY_EXISTING ~cowenf4.cre~ ~override/o#im10w3.cre~
+	WRITE_ASCII 0x248 ~o#im10w3~ #8
+	WRITE_ASCII 0x2cc ~o#im10w3~ #8
+	WRITE_ASCII 0x280 ~o#im10w3~ #32 
+	
+COPY ~Ironmodders/creature/o#mia.cre~ ~override~
+	WRITE_ASCII 0x248 ~o#mia~ #8
+	WRITE_ASCII 0x2cc ~o#mia~ #8
+	WRITE_ASCII 0x280 ~o#mia~ #32
+	SAY NAME1 @0
+	SAY NAME2 @0
+	
+COPY_EXISTING ~ppdili.cre~ ~override/o#dili.cre~
+	WRITE_ASCII 0x248 ~o#dili~ #8
+	WRITE_ASCII 0x2cc ~o#dili~ #8
+	WRITE_ASCII 0x280 ~o#dili~ #32
+
+COPY_EXISTING ~cowenf2.cre~ ~override/o#im10c1.cre~
+	WRITE_ASCII 0x248 ~o#im10c1~ #8
+	WRITE_ASCII 0x2cc ~o#im10c1~ #8
+	WRITE_ASCII 0x280 ~o#im10c1~ #32
+
+COPY_EXISTING ~cowenf2.cre~ ~override/o#im10c2.cre~
+	WRITE_ASCII 0x248 ~o#im10c2~ #8
+	WRITE_ASCII 0x2cc ~o#im10c2~ #8
+	WRITE_ASCII 0x280 ~o#im10c2~ #32
+	
+COMPILE ~Ironmodders/dialogue/o#im10kulyok.d~
+	~Ironmodders/script/o#mia.baf~
+
+EXTEND_BOTTOM ~ar0300.bcs~ ~Ironmodders/script/ar0300.baf~ EVALUATE_BUFFER
+
+/*___________________________*/
+
+BEGIN ~Tears of an  Angel by SimDing0~
+REQUIRE_PREDICATE GAME_IS ~eet~ @10
+
+COPY ~Ironmodders/creature/d0cult1.cre~ ~override~
+SAY NAME1 @8
+SAY NAME2 @8
+
+COPY ~Ironmodders/creature/d0cult2.cre~ ~override~
+SAY NAME1 @9
+SAY NAME2 @9
+
+COMPILE ~Ironmodders/dialogue/d0tears.d~
+
+EXTEND_BOTTOM ~BG3900.bcs~ ~Ironmodders/script/tears_3900.baf~
+
+COMPILE ~Ironmodders/script/d0cult1.baf~
+	~Ironmodders/script/d0cult2.baf~
+	
+/*___________________________*/
+	
+BEGIN ~Pay for Your Sins by Andyr~
+REQUIRE_PREDICATE GAME_IS ~ eet~ @10
+
+ADD_JOURNAL TITLE (@1049) @1043 @1044 @1045 @1046 @1047 @1048  USING ~Ironmodders/%LANGUAGE%/A#Garent.tra~
+
+COPY ~Ironmodders/creature/A#Garent.CRE~ ~override~
+SAY NAME1 @11
+SAY NAME2 @11
+WRITE_ASCII 0x248 ~A#Garent~
+WRITE_ASCII 0x280 ~A#Garent~
+WRITE_ASCII 0x2cc ~A#Garent~
+
+COPY ~Ironmodders/creature/A#Ropar.CRE~ ~override~
+SAY NAME1 @12
+SAY NAME2 @12
+WRITE_ASCII 0x248 ~A#Ropar~
+WRITE_ASCII 0x280 ~A#Ropar~
+WRITE_ASCII 0x2cc ~A#Ropar~
+
+EXTEND_BOTTOM ~BG3300.BCS~ ~Ironmodders/script/A#AR6700.BAF~
+EXTEND_BOTTOM ~BG3400.BCS~ ~Ironmodders/script/A#AR9300.BAF~
+
+COMPILE ~Ironmodders/script/A#Ropar.BAF~
+
+COMPILE ~Ironmodders/dialogue/A#Garent.D~
+
+/*___________________________*/
+
+BEGIN ~Market Prices by Windwalker~
+
+COMPILE ~Ironmodders/dialogue/BlackRoseDial.d~ EVALUATE_BUFFER
+
+COPY ~Ironmodders/bmp/BW11CRE1.BMP~ ~override~
+COPY ~Ironmodders/bmp/BW11CRE2.BMP~ ~override~
+COPY ~Ironmodders/bmp/BW11CRE3.BMP~ ~override~
+COPY ~Ironmodders/bmp/BW11CRE4.BMP~ ~override~
+COPY ~Ironmodders/bmp/BW11CRE6.BMP~ ~override~
+
+COPY ~Ironmodders/creature/BW11SPY.cre~ ~override~
+
+COPY ~Ironmodders/creature/BW11CRE1.CRE~ ~override~
+SAY NAME1 @201
+SAY NAME2 @201
+
+COPY ~Ironmodders/creature/BW11CRE2.CRE~ ~override~
+SAY NAME1 @202
+SAY NAME2 @202
+
+COPY ~Ironmodders/creature/BW11CRE3.CRE~ ~override~
+SAY NAME1 @203
+SAY NAME2 @203
+
+COPY ~Ironmodders/creature/BW11CRE4.CRE~ ~override~
+SAY NAME1 @204
+SAY NAME2 @204
+
+COPY ~Ironmodders/creature/BW11CRE5.CRE~ ~override~
+SAY NAME1 @201
+SAY NAME2 @201
+COPY ~Ironmodders/creature/BW11CRE6.CRE~ ~override~
+SAY NAME1 @205
+SAY NAME2 @205
+
+COPY ~Ironmodders/creature/BW11CRE7.CRE~ ~override~
+SAY NAME1 @201
+SAY NAME2 @201
+
+COPY ~Ironmodders/itm/BW11CRE6.itm~ ~override~
+SAY NAME1 @208
+SAY NAME2 @208
+SAY UNIDENTIFIED_DESC @209
+SAY DESC @209
+
+COPY ~Ironmodders/itm/BW11CRE1.itm~ ~override~
+SAY NAME1 @206
+SAY NAME2 @206
+SAY UNIDENTIFIED_DESC @207
+SAY DESC @207
+
+EXTEND_TOP ~ar0709.bcs~ ~Ironmodders/script/BW0709.BAF~
+EXTEND_TOP ~ar1002.bcs~ ~Ironmodders/script/BW1002.BAF~
+EXTEND_TOP ~ar0406.bcs~ ~Ironmodders/script/BW0406.BAF~
+EXTEND_TOP ~ar0700.bcs~ ~Ironmodders/script/BW0700.BAF~
+EXTEND_TOP ~ar0404.bcs~ ~Ironmodders/script/BW0404.BAF~
+COMPILE ~Ironmodders/script/BW11MAIN.baf~
+COMPILE ~Ironmodders/script/BW11SELF.baf~
+COPY ~Ironmodders/script/BW11ENE2.bcs~ ~override~
+COPY ~Ironmodders/script/BW11ENEM.bcs~ ~override~
+
+/*___________________________*/
+
+BEGIN ~A Z-rated Adventure by Cliffette~
+
+ADD_JOURNAL @114 @115 USING ~Ironmodders/%LANGUAGE%/setup.tra~
+
+COPY ~Ironmodders/itm\CLIFFBZ.ITM~ ~Override~
+SAY NAME1 @21
+SAY NAME2 @21
+SAY DESC @22
+
+COPY ~Ironmodders/bmp/cliffbi.Bam~ ~override~
+COPY ~Ironmodders/bmp/cliffbz.bam~ ~override~
+
+COPY ~Ironmodders/itm\cliffrl.spl~ ~override~
+SAY NAME1 @16
+SAY NAME2 @16
+
+EXTEND_BOTTOM ~ar1100.bcs~ ~Ironmodders/script/cl1100.baf~
+COMPILE ~Ironmodders/script/clbr.baf~
+EXTEND_BOTTOM ~DPLAYER3.BCS~ ~Ironmodders/script/cliffbz.baf~
+COMPILE ~Ironmodders/script/clifrz.baf~
+
+COMPILE ~Ironmodders/dialogue/cliffim4.d~
+
+APPEND ~ITEMDIAL.2DA~ ~CLIFFBZ       5689   CLBIZZ ~
+UNLESS ~CLIFFBZ~
+
+COPY ~Ironmodders/creature/clifbr1.cre~ ~override~
+SAY NAME1 @23
+SAY NAME2 @23
+
+COPY ~Ironmodders/creature/clifbr2.cre~ ~override~
+SAY NAME1 @23
+SAY NAME2 @23
+
+COPY ~Ironmodders/creature/clifrz.cre~ ~override~
+SAY NAME1 @24
+SAY NAME2 @24
+
+COPY ~Ironmodders/creature/clifyo.cre~ ~override~
+SAY NAME1 @25
+SAY NAME2 @25
+
+
+/*___________________________*/
+
+BEGIN ~A Kiss Before Dying by llamababe~
+
+COPY ~Ironmodders/creature/sukiss1.cre~   ~override~
+  SAY NAME1 @14
+  SAY NAME2 @14
+  
+COMPILE ~Ironmodders/dialogue/BonsKiss.d~
+
+EXTEND_TOP ~AR0800.bcs~ ~Ironmodders/script/appendAR0800.baf~
+COMPILE ~Ironmodders/script\SUKISSC1.baf~
+
+COPY ~Ironmodders/bmp/SUKISSS.bmp~ ~override~
+COPY ~Ironmodders/bmp/SUKISS1.eff~ ~override~
+COPY ~Ironmodders/bmp/SUKISS2.eff~ ~override~
+COPY ~Ironmodders/bmp/SUKISSK.wav~ ~override~
+COPY ~Ironmodders/bmp/SUKISS3.eff~ ~override~
+COPY ~Ironmodders/bmp/SUKISS4.eff~ ~override~
+COPY ~Ironmodders/bmp/SUKISS1.spl~ ~override~
+
+/*___________________________*/
+
+BEGIN ~Questor by Leutian~
+
+COPY ~Ironmodders/creature/Questor.cre~ ~override~
+SAY NAME1 @33
+SAY NAME2 @33
+COPY ~Ironmodders/bmp/questor.bmp~ ~override~
+
+COPY ~Ironmodders/creature/QuestM.cre~ ~override~
+
+APPEND ~pdialog.2da~ ~M#quest  M#questo M#questo  M#questo  ***   *** *** ***~
+  UNLESS ~M#quest~
+
+COPY_EXISTING ~Bow09.itm~ ~override/ARMAND.itm~
+SAY NAME1 @36
+SAY NAME2 @36
+SAY DESC #39508
+
+COMPILE ~Ironmodders/script/M#Questo.baf~
+  ~Ironmodders/script/M#QuestM.baf~
+  ~Ironmodders/dialogue/M#Questo.d~
+
+EXTEND_BOTTOM ~Ar1000.bcs~ ~Ironmodders/script/M#AR1000.baf~
+EXTEND_BOTTOM ~Ar1300.bcs~ ~Ironmodders/script/M#AR1300.baf~
+EXTEND_BOTTOM ~Ar1304.bcs~ ~Ironmodders/script/M#AR1300.baf~
+
+/*___________________________*/
+
+BEGIN ~Alhandar by Katalyn~
+
+COPY ~Ironmodders/creature/AKMmona.CRE~  ~override~
+  SAY NAME1 @34
+  SAY NAME2 @34
+
+COPY ~Ironmodders/creature/AKMalha.CRE~ ~override~
+  SAY NAME1 @35
+  SAY NAME2 @35
+  
+EXTEND_TOP ~AR5000.bcs~ ~Ironmodders/script/AKMAR5000.baf~
+
+COMPILE ~Ironmodders/script/AKMmona.baf~
+COMPILE ~Ironmodders/script/AKMalha.baf~
+COMPILE ~Ironmodders/script/AKMcut1.baf~
+COMPILE ~Ironmodders/script/AKMcut2.baf~
+
+COMPILE  ~Ironmodders/dialogue/AKMalha.d~
+
+
+/*___________________________*/
+
+BEGIN ~Bhaalspawns Never Say Sorry by llamababe~
+
+EXTEND_BOTTOM ~AR5006.bcs~ ~Ironmodders/script/appendAR5006.baf~
+COMPILE ~Ironmodders/script/SUMIST.baf~
+COMPILE ~Ironmodders/script/SUSPYIM.baf~
+
+COPY ~Ironmodders/bmp/SUMISTS.bmp~ ~override~
+
+COPY ~Ironmodders/creature/sumist.cre~   ~override~
+  SAY NAME1 @38
+  SAY NAME2 @38 
+  
+COPY ~Ironmodders/creature/suspyim.cre~   ~override~
+
+COPY ~Ironmodders/itm/susuckah.eff~         ~override~
+COPY ~Ironmodders/itm/susucka2.eff~         ~override~
+COPY ~Ironmodders/itm/susucka3.eff~         ~override~
+COPY ~Ironmodders/itm/susucka4.eff~         ~override~
+COPY ~Ironmodders/itm/susucka5.eff~         ~override~
+COPY ~Ironmodders/itm/susuckah.spl~         ~override~
+
+COMPILE ~Ironmodders/dialogue/sumist.d~
+
+/*___________________________*/
+
+BEGIN ~Careless Words Cost Lives by ghreyfain~
+
+COMPILE ~Ironmodders/dialogue/j#booter.d~
+
+COPY ~Ironmodders/creature/j#im8grd.cre~ ~override~
+  SAY NAME1 @39
+  SAY NAME2 @39
+COPY ~Ironmodders/creature/j#im8thg.cre~ ~override~
+  SAY NAME1 #8220
+  SAY NAME2 #8220
+COPY ~Ironmodders/creature/j#im8gr2.cre~ ~override~
+  SAY NAME1 @40
+  SAY NAME2 @40
+COPY ~Ironmodders/creature/j#im8wif.cre~ ~override~
+  SAY NAME1 @41
+  SAY NAME2 @41
+COPY ~Ironmodders/creature/j#im8kid.cre~ ~override~
+  SAY NAME1 @42
+  SAY NAME2 @42
+COPY ~Ironmodders/creature/j#im8ki2.cre~ ~override~
+  SAY NAME1 @43
+  SAY NAME2 @43
+COPY ~Ironmodders/creature/j#im8boo.cre~ ~override~
+  SAY NAME1 #35922
+  SAY NAME2 #35922
+COPY ~Ironmodders/creature/j#im8tor.cre~ ~override~
+  SAY NAME1 @44
+  SAY NAME2 @44
+
+EXTEND_TOP ~AR0500.bcs~ ~Ironmodders/script/adar0500.baf~
+EXTEND_TOP ~AR0527.bcs~ ~Ironmodders/script/adar0527.baf~
+EXTEND_TOP ~AR0528.bcs~ ~Ironmodders/script/adar0528.baf~
+EXTEND_TOP ~AR0307.bcs~ ~Ironmodders/script/adar0307.baf~
+COMPILE ~Ironmodders/script/j#im8grd.baf~
+
+/*___________________________*/
+
+BEGIN ~Lady La'Chatterly by llamababe~
+
+COPY ~Ironmodders/itm/sufebook.itm~ ~override~
+SAY NAME1 @45
+SAY NAME2 @45
+SAY DESC @46
+
+COPY ~Ironmodders/bmp/sufebook.bam~ ~override~
+
+COMPILE ~Ironmodders/dialogue/sufebook.d~ EVALUATE_BUFFER
+
+EXTEND_TOP ~ar0319.bcs~ ~Ironmodders/script/appendar0319.baf~
+
+APPEND ~itemdial.2da~
+~SUFEBOOK   5689  SUFEBOOK~
+UNLESS ~SUFEBOOK~
+
+/*___________________________*/
+
+BEGIN ~Blaze of Glory by jcompton~
+
+EXTEND_BOTTOM ~ar1100.bcs~ ~Ironmodders/script/jc7ar1100.baf~
+
+COMPILE ~Ironmodders/dialogue/jc7dialog.d~
+~Ironmodders/script/pgfiona1.baf~
+~Ironmodders/script/pgfiona2.baf~
+~Ironmodders/script/pgfiscrp.baf~
+~Ironmodders/script/pginvis.baf~
+
+COPY ~Ironmodders/creature/pgcambi.cre~ ~override~
+
+COPY ~Ironmodders/creature/pginvis.cre~ ~override~
+
+COPY ~Ironmodders/creature/pgfiona.cre~ ~override~
+SAY NAME1 @101
+SAY NAME2 @101
+
+ADD_JOURNAL @100 @99 USING ~Ironmodders/%LANGUAGE%/setup.tra~
+
+/*___________________________*/
+
+BEGIN ~Hero for all the Wrong Reasons by neriana~
+
+COPY ~Ironmodders/creature/E#Ianthe.cre~ ~override~
+ SAY NAME1 @47
+ SAY NAME2 @47
+COPY ~Ironmodders/creature/E#Gr1.cre~ ~override~
+ SAY NAME1 @48
+ SAY NAME2 @48
+COPY ~Ironmodders/creature/E#Gr2.cre~ ~override~
+ SAY NAME1 @49
+ SAY NAME2 @49
+
+EXTEND_BOTTOM ~Ar0500.bcs~ ~Ironmodders/script/E#Ar0500.baf~
+COMPILE ~Ironmodders/script/E#Ianthe.baf~
+
+COMPILE ~Ironmodders/dialogue/E#Hero.d~
+
+/*___________________________*/
+
+BEGIN ~What I could have had...by SConrad~
+REQUIRE_PREDICATE GAME_IS ~eet~ @10
+
+COPY ~Ironmodders/creature/SC#I5Gh.cre~ ~override~
+  SAY NAME1 @55
+  SAY NAME2 @55
+  WRITE_ASCII 0x248 ~SC#I5Gh~
+  WRITE_ASCII 0x2cc ~SC#I5Gh~
+  WRITE_ASCII 0x280 ~SC#I5Gh~
+
+COPY_EXISTING ~SC#I5Gh.cre~ ~override\SC#I5Gh2.cre~
+  WRITE_ASCII 0x248 ~SC#I5Gh2~
+  WRITE_ASCII 0x2cc ~SC#I5Gh2~
+  WRITE_ASCII 0x280 ~SC#I5Gh2~
+
+COPY ~Ironmodders/creature/SC#I5M.cre~ ~override~
+  SAY NAME1 @55
+  SAY NAME2 @55
+  WRITE_ASCII 0x248 ~SC#I5M~
+  WRITE_ASCII 0x2cc ~SC#I5M~
+  WRITE_ASCII 0x280 ~SC#I5M~
+
+COPY_EXISTING ~Gorion.cre~ ~override\SC#I5Gor.cre~
+  WRITE_ASCII 0x248 ~None~
+  WRITE_ASCII 0x2cc ~SC#I5Gor~
+  WRITE_ASCII 0x280 ~SC#I5Gor~
+  WRITE_ASCII 0x250 ~None~
+  WRITE_ASCII 0x258 ~None~
+  WRITE_ASCII 0x260 ~None~
+
+COPY_EXISTING ~hellsare.cre~ ~override\SC#I5Sar.cre~
+  SAY NAME1 #12266
+  SAY NAME2 #12266
+  WRITE_ASCII 0x248 ~None~
+  WRITE_ASCII 0x2cc ~SC#I5Sar~
+  WRITE_ASCII 0x280 ~SC#I5Sar~
+  WRITE_ASCII 0x250 ~None~
+  WRITE_ASCII 0x258 ~None~
+  WRITE_ASCII 0x260 ~None~
+
+COPY_EXISTING ~Amelm01.cre~ ~override\SC#I5Elm.cre~
+  WRITE_ASCII 0x248 ~None~
+  WRITE_ASCII 0x2cc ~SC#I5Elm~
+  WRITE_ASCII 0x280 ~SC#I5Elm~
+  WRITE_ASCII 0x250 ~None~
+  WRITE_ASCII 0x258 ~None~
+  WRITE_ASCII 0x260 ~None~
+  REMOVE_CRE_ITEM ~minhp1~ 
+
+COPY_EXISTING ~Imoen.cre~ ~override\SC#I5Imm.cre~
+  WRITE_ASCII 0x248 ~None~
+  WRITE_ASCII 0x2cc ~None~
+  WRITE_ASCII 0x280 ~SC#I5Imm~
+  WRITE_ASCII 0x250 ~None~
+  WRITE_ASCII 0x258 ~None~
+  WRITE_ASCII 0x260 ~None~
+
+COPY_EXISTING ~Jon1.cre~ ~override\SC#I5Jon.cre~
+  WRITE_ASCII 0x248 ~None~
+  WRITE_ASCII 0x2cc ~SC#I5Jon~
+  WRITE_ASCII 0x280 ~SC#I5Jon~
+  WRITE_ASCII 0x250 ~None~
+  WRITE_ASCII 0x258 ~None~
+  WRITE_ASCII 0x260 ~None~
+
+COPY_EXISTING ~Drizzt.cre~ ~override\SC#I5Dri.cre~
+  WRITE_ASCII 0x248 ~None~
+  WRITE_ASCII 0x2cc ~SC#I5Dri~
+  WRITE_ASCII 0x280 ~SC#I5Dri~
+  WRITE_ASCII 0x250 ~None~
+  WRITE_ASCII 0x258 ~None~
+  WRITE_ASCII 0x260 ~None~
+  WRITE_ASCII 0x268 ~None~
+
+COMPILE ~Ironmodders/script/SC#I5C1.baf~
+COMPILE ~Ironmodders/script/SC#I5C2.baf~
+COMPILE ~Ironmodders/script/SC#I5C3.baf~
+COMPILE ~Ironmodders/script/SC#I5C4.baf~
+COMPILE ~Ironmodders/script/SC#I5C5.baf~
+COMPILE ~Ironmodders/script/SC#I5C6.baf~
+COMPILE ~Ironmodders/script/SC#I5C7.baf~
+COMPILE ~Ironmodders/script/SC#I5C8.baf~
+COMPILE ~Ironmodders/script/SC#I5C9.baf~
+COMPILE ~Ironmodders/script/SC#I5C10.baf~
+COMPILE ~Ironmodders/script/SC#I5C11.baf~
+
+COPY_EXISTING ~Ar0043.are~ ~override\SCIM91.are~
+  WRITE_ASCII 0x94 ~SCIM91~
+
+EXTEND_BOTTOM ~Ar0700.bcs~ ~Ironmodders/script/SC#AR0700.baf~
+
+COMPILE ~Ironmodders/dialogue/SC#IM5.d~
+
+/*___________________________*/
+
+BEGIN ~The Last Mug of Ale in Amn by ghreyfain~
+
+COMPILE ~Ironmodders/dialogue/J#DwaBar.d~
+
+COMPILE ~Ironmodders/script/J#DwaBar.baf~
+COMPILE ~Ironmodders/script/J#Barten.baf~
+
+EXTEND_BOTTOM ~Baldur.bcs~ ~Ironmodders/script/J#Baldur.Baf~
+
+EXTEND_TOP ~AR0500.bcs~ ~Ironmodders/script/J#BAR0500.baf~
+
+COPY ~Ironmodders/itm/J#Ale.itm~ ~Override~
+  SAY NAME1 #54026
+  SAY NAME2 @59
+  SAY DESC @60
+
+COPY ~Ironmodders/creature/J#Gorch.cre~ ~override\J#Gorch.cre~
+  SAY NAME1 #22077
+  SAY NAME2 #22077
+COPY ~Ironmodders/creature/J#Bernar.cre~ ~override\J#Bernar.cre~
+  SAY NAME1 #16646
+  SAY NAME2 #16646
+COPY ~Ironmodders/creature/J#DwaBar.cre~ ~override\J#DwaBar.cre~
+  SAY NAME1 @56
+  SAY NAME2 @56
+COPY ~Ironmodders/creature/J#TThumb.cre~ ~override\J#TThumb.cre~
+  SAY NAME1 #23728
+  SAY NAME2 #23728
+COPY ~Ironmodders/creature/J#Pugney.cre~ ~override\J#Pugney.cre~
+  SAY NAME1 #30197
+  SAY NAME2 #30197
+COPY ~Ironmodders/creature/J#HelBar.cre~ ~override\J#HelBar.cre~
+  SAY NAME1 @57
+  SAY NAME2 @57
+COPY ~Ironmodders/creature/J#Thunde.cre~ ~override\J#Thunde.cre~
+  SAY NAME1 #37008
+  SAY NAME2 #37008
+COPY ~Ironmodders/creature/J#PAtric.cre~ ~override\J#PAtric.cre~
+  SAY NAME1 #8020
+  SAY NAME2 #8020
+COPY ~Ironmodders/creature/J#Vincen.cre~ ~override\J#Vincen.cre~
+  SAY NAME1 #2156
+  SAY NAME2 #2156
+COPY ~Ironmodders/creature/J#DroBar.cre~ ~override\J#DroBar.cre~
+  SAY NAME1 #50928
+  SAY NAME2 #50928
+COPY ~Ironmodders/creature/J#Brynnl.cre~ ~override\J#Brynnl.cre~
+  SAY NAME1 @58
+  SAY NAME2 @58
+COPY ~Ironmodders/creature/J#Vyatri.cre~ ~override\J#Vyatri.cre~
+  SAY NAME1 #39017
+  SAY NAME2 #39017
+  
+/*___________________________*/
+
+
+BEGIN ~Diplomacy and Druids by neriana~
+
+COPY ~Ironmodders/creature/E#FMob1.cre~ ~override~
+ SAY NAME1 #9430
+ SAY NAME2 #9430
+COPY ~Ironmodders/creature/E#fmob2.cre~ ~override~
+ SAY NAME1 #9430
+ SAY NAME2 #9430
+COPY ~Ironmodders/creature/E#FMob4.cre~ ~override~
+ SAY NAME1 #9430
+ SAY NAME2 #9430
+COPY ~Ironmodders/creature/E#kern.cre~ ~override~
+ SAY NAME1 @61
+ SAY NAME2 @61
+COPY ~Ironmodders/creature/E#mMob1.cre~ ~override~
+ SAY NAME1 #9430
+ SAY NAME2 #9430
+COPY ~Ironmodders/creature/E#mmob2.cre~ ~override~
+ SAY NAME1 #9430
+ SAY NAME2 #9430
+COPY ~Ironmodders/creature/E#mMob3.cre~ ~override~
+ SAY NAME1 #9430
+ SAY NAME2 #9430
+COPY ~Ironmodders/creature/E#mmob4.cre~ ~override~
+ SAY NAME1 #9430
+ SAY NAME2 #9430
+COPY ~Ironmodders/creature/E#rhys.cre~ ~override~
+ SAY NAME1 @62
+ SAY NAME2 @62
+ 
+EXTEND_BOTTOM ~Ar2000.bcs~ ~Ironmodders/script/E#Ar2000.baf~
+
+COMPILE  ~Ironmodders/script/E#Rhys.baf~
+
+COMPILE ~Ironmodders/dialogue/E#Rhys.d~
+
+/*___________________________*/
+
+BEGIN ~Incorrigible by Icelus~
+
+EXTEND_TOP ~AR2010.bcs~ ~Ironmodders/script/if2010.baf~
+COMPILE ~Ironmodders/dialogue/icefdial.d~
+
+/*___________________________*/

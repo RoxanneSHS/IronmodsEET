@@ -1,0 +1,26 @@
+IF
+Global("E#Gr2Exists","Global",0)
+THEN
+RESPONSE #100
+SetGlobal("E#Gr2Exists","AR0500",1)
+CreateCreature("E#Gr2",[3180.2200],3)
+SetGlobal("E#Gr2Exists","Global",1)
+END
+
+IF
+Global("E#Gr1Exists","Global",0)
+THEN
+RESPONSE #100
+SetGlobal("E#Gr1Exists","AR0500",1)
+CreateCreature("E#Gr1",[3242.2180],3)
+SetGlobal("E#Gr1Exists","Global",1)
+END
+
+IF
+Global("E#IantheExists","Global",0)
+THEN
+RESPONSE #100
+SetGlobal("E#IantheExists","AR0500",1)
+CreateCreature("E#Ianthe",[3205.2170],3)
+SetGlobal("E#IantheExists","Global",1)
+END

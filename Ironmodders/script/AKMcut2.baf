@@ -1,0 +1,15 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId(Player1)
+ActionOverride("AKMmona",MoveToPoint([420.818])
+Wait(1)
+ActionOverride("AKMalha",DisplayStringHead(Myself,@37)
+ActionOverride("AKMmona",DestroySelf())
+ActionOverride("AKMalha",MoveToPoint([340.869])
+Wait(3)
+ActionOverride("AKMalha",StartDialogueNoSet(Player1))
+SetGlobal("AKMend","GLOBAL",3)
+EndCutSceneMode()
+END

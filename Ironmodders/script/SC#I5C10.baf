@@ -1,0 +1,16 @@
+IF
+     True()
+THEN
+     RESPONSE #100
+           CutSceneId(Player1)
+           Wait(1)
+           CreateCreature("SC#I5Gh",[580.614],15)
+           Wait(2)
+           DisplayStringHead("SC#I5Gh",@50)
+           Wait(5)
+           ActionOverride("SC#I5Gh",ForceSpell("SC#I5M",FLASHY_DEATH_1))
+           Wait(2)
+           DisplayStringHead("SC#I5Gh",@51)
+           Wait(5)
+           ActionOverride("SC#I5Gh",StartDialogueNoSet(Player1))
+END

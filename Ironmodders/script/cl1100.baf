@@ -1,0 +1,8 @@
+IF
+    Global("CliffAddIM4Chars","AR1100",0)
+THEN
+    RESPONSE #100
+        SetGlobal("CliffAddIM4Chars","AR1100",1)
+        CreateCreature("clifrz",[1350.2116],3)
+        Continue()
+END

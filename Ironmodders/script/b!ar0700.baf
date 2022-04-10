@@ -1,0 +1,7 @@
+IF
+  Global("B!IMJolunExists","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateCreature("b!jolun2",[001.001],0)
+    SetGlobal("B!IMJolunExists","GLOBAL",1)
+END

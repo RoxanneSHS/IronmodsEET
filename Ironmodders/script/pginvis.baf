@@ -1,0 +1,8 @@
+IF
+See([PC])
+THEN
+RESPONSE #100
+CreateCreatureDoor("PGfiona",[2487.1658],0)
+SmallWait(1)
+DestroySelf()
+END

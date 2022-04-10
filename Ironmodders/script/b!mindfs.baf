@@ -1,0 +1,38 @@
+IF
+  Global("B!ThousandWords","GLOBAL",3)
+  OR(6)
+    See(Player1)
+    See(Player2)
+    See(Player3)
+    See(Player4)
+    See(Player5)
+    See(Player6)
+THEN
+  RESPONSE #100
+    SetGlobal("B!ThousandWords","GLOBAL",4)
+    Dialogue(Player1)
+END
+
+IF
+  AttackedBy([GOODCUTOFF],DEFAULT)
+  Allegiance(Myself,NEUTRAL)
+THEN
+  RESPONSE #100
+  Enemy()
+END
+
+IF
+  OR(5)
+    AttackedBy([PC],DEFAULT)
+    AttackedBy([FAMILIAR],DEFAULT)
+    AttackedBy([ALLY],DEFAULT)
+    AttackedBy([CONTROLLED],DEFAULT)
+    AttackedBy([CHARMED],DEFAULT)
+  Allegiance(Myself,ENEMY)
+  ActionListEmpty()
+THEN
+  RESPONSE #100
+  Enemy()
+END
+
+

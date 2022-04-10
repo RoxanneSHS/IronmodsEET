@@ -1,0 +1,33 @@
+IF
+	GlobalTimerExpired("J#DwarfBarTimer","GLOBAL")
+	Global("J#AleAmbush","GLOBAL",0)
+	PartyHasItem("J#Ale")
+	AreaType(OUTDOOR)
+	CombatCounter(0)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		CreateCreatureObjectOffScreen("J#Gorch",Player1,0,0,0)
+		CreateCreatureObjectOffScreen("J#Bernar",Player1,0,0,0)
+		CreateCreatureObjectOffScreen("J#DroBar",Player1,0,0,0)
+		CreateCreatureObjectOffScreen("J#TThumb",Player1,0,0,0)
+		CreateCreatureObjectOffScreen("J#Thunde",Player1,0,0,0)
+		CreateCreatureObjectOffScreen("J#Pugney",Player1,0,0,0)
+		CreateCreatureObjectOffScreen("J#Patric",Player1,0,0,0)
+		CreateCreatureObjectOffScreen("J#Vincen",Player1,0,0,0)
+		CreateCreatureObjectOffScreen("J#Brynnl",Player1,0,0,0)
+		CreateCreatureObjectOffScreen("J#Vyatri",Player1,0,0,0)
+		CreateCreatureObjectOffScreen("J#Helbar",Player1,0,0,0)
+		SetGlobal("J#AleAmbush","GLOBAL",1)
+		EndCutSceneMode()
+END
+
+IF
+	Global("J#AleAmbush","GLOBAL",2)
+	CombatCounter(0)
+THEN
+	RESPONSE #100
+		CreateCreatureObjectOffScreen("J#DwaBar",Player1,0,0,0)
+		SetGlobal("J#AleAmbush","GLOBAL",3)
+END
+

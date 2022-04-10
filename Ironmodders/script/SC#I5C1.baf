@@ -1,0 +1,16 @@
+IF
+     True()
+THEN
+     RESPONSE #100
+           CutSceneId(Player1)
+           LeaveAreaLUA("SCIM91","",[557.540],4)
+           ActionOverride(Player2,LeaveAreaLUA("SCIM91","",[506.564],14))
+           ActionOverride(Player3,LeaveAreaLUA("SCIM91","",[520.510],14))
+           ActionOverride(Player4,LeaveAreaLUA("SCIM91","",[482.528],14))
+           ActionOverride(Player5,LeaveAreaLUA("SCIM91","",[497.473],14))
+           ActionOverride(Player6,LeaveAreaLUA("SCIM91","",[442.481],14))
+           DayNight(DAWN_END)
+           CreateCreature("SC#I5M",[580.614],5)
+           Wait(4)
+           ActionOverride("SC#I5M",StartDialogueNoSet(Player1))
+END

@@ -1,0 +1,167 @@
+IF
+    G("CliffSeesBear",1)
+	HasItem("cliffbz",Player1)
+THEN RESPONSE #100
+	StartCutSceneMode()
+	ClearAllActions()
+	MoveViewObject(Player1,4)
+	Wait(2)
+	CreateVisualEffectObject("SPLIGHTB",Player1)
+	ApplyDamage(Player1,1,ELECTRICITY)
+	Wait(1)
+	DisplayStringHead(Player1,@31)
+	Wait(2)
+	SG("CliffSeesBear",2)
+	EndCutSceneMode()
+END
+
+
+IF
+	Dead("Clbr1")
+	Dead("Clbr2")
+	HasItem("cliffbz",Player1)
+	G("CliffFinito",0)
+THEN RESPONSE #100
+	SG("CliffShocked",5)
+	SG("CliffFinito",1)
+	StartCutSceneMode()
+	ClearAllActions()
+	MoveViewObject(Player1,0)
+	Wait(2)
+	DisplayStringHead(Player1,@32)
+	Wait(5)
+	DisplayStringHead(Player1,@13)
+	Wait(6)
+	CreateVisualEffectObject("SPLIGHTB",Player1)
+	ApplyDamage(Player1,1,ELECTRICITY)
+	Wait(2)
+	DisplayStringHead(Player1,@18)
+	Wait(3)
+	DisplayStringHead(Player1,@19)
+	Wait(5)
+	ActionOverride(Player1,DestroyItem("cliffbz")
+	EndCutSceneMode()
+	EraseJournalEntry(@115)
+	AddJournalEntry(@114,QUEST_DONE)
+	AddexperienceParty(5000)
+	ReallyForceSpellRES("cliffrl",Player1)
+END
+
+
+
+IF
+	InParty(Player2)
+    HasItem("cliffbz",Player2)
+THEN RESPONSE #100
+	ActionOverride(Player2,MoveToObject(Player1))
+	ActionOverride(Player2,GiveItem("cliffbz",Player1))
+	RealSetGlobalTimer("CliffShockTimer","GLOBAL",10)
+  	SG("CliffBuzz",1)
+END
+
+IF
+	InParty(Player3)
+    HasItem("cliffbz",Player3)
+THEN RESPONSE #100
+	ActionOverride(Player3,MoveToObject(Player1))
+	ActionOverride(Player3,GiveItem("cliffbz",Player1))
+	RealSetGlobalTimer("CliffShockTimer","GLOBAL",10)
+  	SG("CliffBuzz",1)
+END
+
+IF
+	InParty(Player4)
+    HasItem("cliffbz",Player4)
+THEN RESPONSE #100
+	ActionOverride(Player4,MoveToObject(Player1))
+	ActionOverride(Player4,GiveItem("cliffbz",Player1))
+	RealSetGlobalTimer("CliffShockTimer","GLOBAL",10)
+  	SG("CliffBuzz",1)
+END
+
+IF
+	InParty(Player5)
+    HasItem("cliffbz",Player5)
+THEN RESPONSE #100
+	ActionOverride(Player5, MoveToObject(Player1))
+	ActionOverride(Player5,GiveItem("cliffbz",Player1))
+	RealSetGlobalTimer("CliffShockTimer","GLOBAL",10)
+  	SG("CliffBuzz",1)
+END
+
+IF
+	InParty(Player6)
+    HasItem("cliffbz",Player6)
+THEN RESPONSE #100
+	ActionOverride(Player6, MoveToObject(Player1))
+	ActionOverride(Player6,GiveItem("cliffbz",Player1))
+	RealSetGlobalTimer("CliffShockTimer","GLOBAL",10)
+  	SG("CliffBuzz",1)
+END
+
+IF
+	G("CliffBuzz",1)
+THEN RESPONSE #100
+	SmallWait(2)
+	DisplayStringHead(Player1,@27)
+	SG("CliffBuzz",0)
+END
+
+
+IF
+	RealGlobalTimerExpired("CliffShockTimer00","GLOBAL")
+	CombatCounter(0)
+	HasItem("cliffbz",Player1)
+	G("CliffShocked",0)
+THEN RESPONSE #100
+	SG("CliffShocked",1)
+	StartCutSceneMode()
+	ClearAllActions()
+	MoveViewObject(Player1,0)
+	Wait(1)
+	CreateVisualEffectObject("SPLIGHTB",Player1)
+	ApplyDamage(Player1,2,ELECTRICITY)
+	Wait(2)
+	DisplayStringHead(Player1,@17)
+	Wait(7)
+	DisplayStringHead(Player1,@26)
+	Wait(4)
+	EndCutSceneMode()
+	RealSetGlobalTimer("CliffShockTimer","GLOBAL",10)
+END
+
+IF 
+	RealGlobalTimerExpired("CliffShockTimer","GLOBAL")
+   	CombatCounter(0)
+	HasItem("cliffbz",Player1)
+	G("CliffShocked",1)
+THEN RESPONSE  #100
+	SG("CliffShocked",2)
+END
+
+IF
+	CombatCounter(0)
+	HasItem("cliffbz",Player1)
+	G("CliffShocked",2)
+THEN RESPONSE #40
+		CreateVisualEffectObject("SPLIGHTB",Player1)
+		ApplyDamage(Player1,1,ELECTRICITY)
+		Wait(1)
+		DisplayStringHead(Player1,@30)
+		RealSetGlobalTimer("CliffShockTimer","GLOBAL",10)
+		SG("CliffShocked",1)
+RESPONSE #40
+		CreateVisualEffectObject("SPLIGHTB",Player1)
+		ApplyDamage(Player1,1,ELECTRICITY)
+		Wait(1)
+		DisplayStringHead(Player1,@28)
+		RealSetGlobalTimer("CliffShockTimer","GLOBAL",10)
+		SG("CliffShocked",1)
+RESPONSE #20
+		DisplayStringHead(Player1,@29)
+		RealSetGlobalTimer("CliffShockTimer","GLOBAL",5)
+		SG("CliffShocked",1)
+END
+
+
+

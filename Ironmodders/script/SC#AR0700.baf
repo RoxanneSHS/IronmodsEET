@@ -1,0 +1,16 @@
+IF
+  Global("SC#I5GhExists","AR0700",0)
+  TimeOfDay(Night)
+  GlobalLT("AsylumPlot","GLOBAL",3)
+THEN
+  RESPONSE #100
+    SetGlobal("SC#I5GhExists","AR0700",1)
+    CreateCreature("SC#I5Gh",[4645.2406],2)
+END
+
+IF
+  GlobalGT("SC#I5Plot","GLOBAL",10)
+THEN
+  RESPONSE #100
+    ActionOverride("SC#I5Gh",DestroySelf())
+END

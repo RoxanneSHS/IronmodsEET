@@ -1,0 +1,15 @@
+IF
+Global("BW11SetTheNPCUP0404","GLOBAL",0)
+OR(2)
+Global("BW11SHENSEWER","GLOBAL",1)
+Global("BW11HELPUS2","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("BW11SetTheNPCUP0404","GLOBAL",1)
+CreateCreature("BW11CRE5",[1183.2290],2)
+CreateCreature("BW11CRE6",[1145.2321],13)
+CreateCreature("BW11SPY",[1145.2278],3)
+Wait(2)
+StartCutSceneMode()
+StartCutScene("BW11MAIN")
+END

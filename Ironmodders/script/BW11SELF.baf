@@ -1,0 +1,6 @@
+IF
+Global("BW11TalkedOnce","GLOBAL",1)
+THEN
+RESPONSE #100
+DestroySelf()
+END

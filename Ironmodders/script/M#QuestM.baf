@@ -1,0 +1,15 @@
+IF
+See([PC])
+NumTimesTalkedTo(0)
+THEN
+RESPONSE #100
+Dialogue(Nearest([PC]))
+END
+
+IF
+See([PC])
+THEN
+RESPONSE #100
+EquipMostDamagingMelee()
+Attack(LastSeenBy(Myself))
+END
